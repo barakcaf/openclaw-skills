@@ -125,10 +125,12 @@ Branch `feat/ai-code-review`, commit all files, open PR. The workflows run on th
 ## Design Notes
 
 - **Auto-resolve**: on re-push, asks Bedrock if prior findings are fixed, resolves threads automatically.
-- **Cycle limit**: counts `@claude` fix comments; stops after max cycles to prevent loops.
-- **App token**: GITHUB_TOKEN comments don't trigger `issue_comment` — App token required.
+- **Cycle limit**: counts `@claude` fix comments; stops after max cycles to prevent loops. Failed/cancelled runs still increment the counter — delete old `@claude` comments to reset.
+- **App token**: GITHUB_TOKEN comments don't trigger `issue_comment` — App token required. GitHub App bot login format is `appname[bot]` (e.g. `myapp-autofix[bot]`). Workflow `if` conditions must match exactly.
 - **Inline fallback**: findings posted as inline comments; fall back to summary if position mapping fails.
 - **Unresolved threads block merge**: prior unresolved findings count as blockers until addressed.
+- **`no-auto-fix` label**: add to any PR to skip automatic fix attempts. Useful for false positives or when findings require manual intervention.
+- **Notification**: the review script (`ai_review.py`) logs a warning when `NOTIFY_CHANNEL` is not set. If you configured notifications and they're not arriving, check that `NOTIFY_CHANNEL` and the corresponding secrets are passed as env vars in the workflow.
 
 ## Rules
 
