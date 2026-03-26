@@ -28,7 +28,7 @@ On first invocation, check memory for repo config. If not found, ask:
 3. **Agent tools in use** — Claude Code, Codex, Cursor, other?
 4. **Existing steering files** — or let me scan and discover them?
 
-Store in `memory/repos/<repo-name>.md`.
+Store in `memory/skills/agent-docs-auditor/<repo-name>.md`.
 
 ### Step 1: Check Freshness
 

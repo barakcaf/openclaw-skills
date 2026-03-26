@@ -413,7 +413,7 @@ jobs:
 
 ## Customization Checklist
 
-All values come from repo config (stored in `memory/repos/<repo-name>.md`). For each new repo, update:
+All values come from repo config (stored in `memory/skills/bedrock-pr-review/<repo-name>.md`). For each new repo, update:
 
 - [ ] Test steps in `pr-review.yml` (languages, commands, working directories)
 - [ ] `MODEL_ID`, `MAX_FILES`, `MAX_CHANGED_LINES`, `MAX_OUTPUT_TOKENS` env vars in review job
