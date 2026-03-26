@@ -199,6 +199,8 @@ jobs:
             const findings = process.env.FINDINGS_SUMMARY;
             const body = `@claude [ai-fix-cycle-${cycle}] Fix the following code review findings. ` +
               `Read .github/prompts/fix.md for detailed instructions.\n\n` +
+              `**Available tools:** Glob, Grep, LS, Read, Bash (git add, git commit, git push, git rm). ` +
+              `Use Bash to write/edit files (e.g. sed, cat, echo). Do NOT attempt to use Write or Edit tools — they are not available.\n\n` +
               `**Findings (cycle ${cycle}):**\n\n${findings}`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -265,7 +267,7 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           use_bedrock: "true"
-          claude_args: "--model sonnet --max-turns 15"  # CUSTOMIZE: model + max-turns from repo config
+          claude_args: "--model sonnet --max-turns 25"  # CUSTOMIZE: model + max-turns from repo config
           github_token: ${{ steps.app-token.outputs.token }}
           trigger_phrase: "@claude"
           # CUSTOMIZE: bot name and ID

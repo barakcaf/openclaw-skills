@@ -34,7 +34,7 @@ Then present **optional** settings with defaults — accept all or customize:
 | Review model | `us.anthropic.claude-opus-4-6-v1` |
 | Fix model | `sonnet` |
 | Max fix cycles | `2` |
-| Max fix turns | `15` |
+| Max fix turns | `25` |
 | Max files per review | `15` |
 | Max changed lines | `1500` |
 | Max output tokens | `16384` |
