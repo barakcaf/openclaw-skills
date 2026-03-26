@@ -343,6 +343,8 @@ def parse_json_response(raw: str) -> dict:
 # ---------------------------------------------------------------------------
 
 NOTIFY_CHANNEL = os.environ.get("NOTIFY_CHANNEL", "none").lower()
+if NOTIFY_CHANNEL == "none":
+    log.info("NOTIFY_CHANNEL not set — notifications disabled. Set to telegram/slack/whatsapp to enable.")
 
 
 def send_notification(message: str, plain_text: str = "") -> None:
@@ -358,7 +360,10 @@ def send_notification(message: str, plain_text: str = "") -> None:
         _send_slack(plain_text or _strip_html(message))
     elif NOTIFY_CHANNEL == "whatsapp":
         _send_whatsapp(plain_text or _strip_html(message))
-    # "none" or unrecognized — silently skip
+    elif NOTIFY_CHANNEL == "none":
+        return  # Explicitly disabled — no warning needed
+    else:
+        log.warning("NOTIFY_CHANNEL='%s' is not recognized (expected: telegram, slack, whatsapp, none)", NOTIFY_CHANNEL)
 
 
 def _strip_html(html: str) -> str:
