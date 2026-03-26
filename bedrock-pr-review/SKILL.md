@@ -43,7 +43,7 @@ Then present **optional** settings with defaults — accept all or customize:
 
 GitHub App name and bot ID are collected during Step 1b.
 
-Store all values in `memory/repos/<repo-name>.md`. Users can adjust any setting at any time.
+Store all values in `memory/skills/bedrock-pr-review/<repo-name>.md`. Users can adjust any setting at any time.
 
 ## Architecture
 

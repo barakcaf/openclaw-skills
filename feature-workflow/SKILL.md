@@ -19,7 +19,7 @@ On first invocation against a repo, check memory for its config. If not found, a
 6. **Security constraints** — Any security rules file to check? (path or none)
 7. **Merge strategy** — Squash, merge, or rebase?
 
-Store answers in `memory/repos/<repo-name>.md`. Read this file at the start of every subsequent run.
+Store answers in `memory/skills/feature-workflow/<repo-name>.md`. Read this file at the start of every subsequent run.
 
 On first run, also verify branch protection on the default branch:
 ```bash
