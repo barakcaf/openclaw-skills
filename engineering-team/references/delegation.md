@@ -1,4 +1,4 @@
-## Expert Team Delegation
+## Engineering Team Delegation
 
 Spawn domain experts as sub-agents for review, design, research, or implementation tasks.
 

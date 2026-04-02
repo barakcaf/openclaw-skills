@@ -1,9 +1,9 @@
 ---
-name: expert-review
-description: "Add expert engineering agents and domain rules to any project repository using .claude/rules/ and .claude/agents/ conventions. Creates 3 role-based agents (principal-engineer, security-engineer, ux-engineer) that can review, design, research, and implement. Use when: (1) setting up expert agents for a new or existing repo, (2) adding security/UX/architecture/infrastructure expertise, (3) bootstrapping .claude/rules/ and .claude/agents/ from proven templates, (4) configuring OpenClaw delegation for parallel sub-agent work. NOT for: running actual reviews (just ask), one-off code fixes, or repos without Claude Code or OpenClaw."
+name: engineering-team
+description: "Scaffold an engineering team (principal-engineer, security-engineer, ux-engineer) with domain expertise rules to any project repository using .claude/rules/ and .claude/agents/ conventions. Creates 3 role-based agents (principal-engineer, security-engineer, ux-engineer) that can review, design, research, and implement. Use when: (1) setting up expert agents for a new or existing repo, (2) adding security/UX/architecture/infrastructure expertise, (3) bootstrapping .claude/rules/ and .claude/agents/ from proven templates, (4) configuring OpenClaw delegation for parallel sub-agent work. NOT for: running actual reviews (just ask), one-off code fixes, or repos without Claude Code or OpenClaw."
 ---
 
-# Expert Team Setup
+# Engineering Team Setup
 
 Scaffold role-based engineering agents and domain expertise rules into any repo.
 
@@ -82,7 +82,7 @@ git push
 ### 7. Report
 
 ```
-✅ Expert team for <repo>
+✅ Engineering team for <repo>
 
 Rules (.claude/rules/ — auto-activate by glob):
   security.md        — [created|merged]
@@ -98,4 +98,4 @@ Agents (.claude/agents/ — invoke with /agent-name):
 OpenClaw delegation: [configured|already present|skipped]
 ```
 
-Store setup config in `memory/skills/expert-review/<repo-name>.md`.
+Store setup config in `memory/skills/engineering-team/<repo-name>.md`.
