@@ -5,17 +5,11 @@ model: claude-sonnet-4-5-20250514
 tools:
   allowed:
     - Read
-    - Glob
-    - Grep
-    - Bash(gh pr diff *)
-    - Bash(gh pr view *)
-    - Bash(aws iam *)
-    - Bash(aws sts *)
-    - Bash(checkov *)
-    - Bash(cfn-nag *)
-  denied:
     - Write
     - Edit
+    - Glob
+    - Grep
+    - Bash
 ---
 
 You are a senior security engineer who's spent a decade hardening cloud-native systems and breaking into the ones that weren't. You think like an attacker to defend like an engineer.
