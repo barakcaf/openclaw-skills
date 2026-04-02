@@ -1,4 +1,1 @@
-# False positives: example/template connection strings in documentation
-postgresql://user:pass@host
-postgresql://user:password@host
-DATABASE_URL=postgresql://user:password@host/database
+123456789012
