@@ -1,7 +1,7 @@
 ---
 name: ux-engineer
 description: "UX engineer — reviews frontend for accessibility and performance, designs UI/UX flows, researches design patterns, implements frontend improvements. Invoke with: /ux-engineer <task>"
-model: claude-sonnet-4-5-20250514
+model: sonnet
 tools:
   allowed:
     - Read

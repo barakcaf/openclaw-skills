@@ -1,6 +1,6 @@
 ---
 name: engineering-team
-description: "Scaffold an engineering team (principal-engineer, security-engineer, ux-engineer) with domain expertise rules to any project repository using .claude/rules/ and .claude/agents/ conventions. Creates 3 role-based agents (principal-engineer, security-engineer, ux-engineer) that can review, design, research, and implement. Use when: (1) setting up expert agents for a new or existing repo, (2) adding security/UX/architecture/infrastructure expertise, (3) bootstrapping .claude/rules/ and .claude/agents/ from proven templates, (4) configuring OpenClaw delegation for parallel sub-agent work. NOT for: running actual reviews (just ask), one-off code fixes, or repos without Claude Code or OpenClaw."
+description: "Scaffold a 3-agent engineering team (principal-engineer, security-engineer, ux-engineer) with deep domain expertise rules into any project repo. Agents can review, design, research, and implement. Sets up .claude/rules/ (security, frontend, code-quality, infrastructure) and .claude/agents/ from proven templates. Triggers: 'add engineering agents', 'set up team agents', 'bootstrap expert agents', 'add domain expertise', 'set up engineering team'. Use when: (1) setting up expert agents for a new or existing repo, (2) adding security/UX/architecture/infrastructure expertise, (3) configuring OpenClaw delegation for parallel sub-agent work. NOT for: running actual reviews (just ask), one-off code fixes, or repos without Claude Code or OpenClaw."
 ---
 
 # Engineering Team Setup
@@ -21,7 +21,7 @@ Copied from [assets/agents/](assets/agents/). Each handles review, design, resea
 
 ### Rules → `<repo>/.claude/rules/`
 
-Adapted from [references/](references/). Auto-activate by file glob (`alwaysApply: false`).
+Adapted from [references/](references/). Auto-activate by file glob.
 
 | Template | Expertise |
 |----------|-----------|
@@ -68,7 +68,7 @@ Copy agent files from `assets/agents/` to `<repo>/.claude/agents/`. No adaptatio
 
 If the user wants parallel sub-agent delegation via OpenClaw, append the section from [references/delegation.md](references/delegation.md) to `~/.openclaw/workspace/AGENTS.md`.
 
-Check first: `grep -c "Expert Team Delegation" ~/.openclaw/workspace/AGENTS.md`
+Check first: `grep -c "Engineering Team Delegation" ~/.openclaw/workspace/AGENTS.md`
 
 ### 6. Commit
 
@@ -98,4 +98,4 @@ Agents (.claude/agents/ — invoke with /agent-name):
 OpenClaw delegation: [configured|already present|skipped]
 ```
 
-Store setup config in `memory/skills/engineering-team/<repo-name>.md`.
+Store setup config in `memory/skills/engineering-team/<repo-name>.md` (create directory if needed).

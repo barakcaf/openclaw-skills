@@ -1,7 +1,7 @@
 ---
 name: security-engineer
 description: "Security engineer — reviews code for vulnerabilities, designs secure architectures, researches security tools and patterns, implements security fixes. Invoke with: /security-engineer <task>"
-model: claude-sonnet-4-5-20250514
+model: sonnet
 tools:
   allowed:
     - Read

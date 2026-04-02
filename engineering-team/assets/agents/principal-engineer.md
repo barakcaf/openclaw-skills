@@ -1,7 +1,7 @@
 ---
 name: principal-engineer
 description: "Principal engineer — owns architecture, code quality, infrastructure, and system design. Reviews PRs, designs systems, researches approaches, and drives complex implementations. Invoke with: /principal-engineer <task>"
-model: claude-sonnet-4-5-20250514
+model: sonnet
 tools:
   allowed:
     - Read
