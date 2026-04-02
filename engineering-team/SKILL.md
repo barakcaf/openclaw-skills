@@ -15,7 +15,7 @@ Copied from [assets/agents/](assets/agents/). Each handles review, design, resea
 
 | Agent | Domain |
 |-------|--------|
-| [principal-engineer](assets/agents/principal-engineer.md) | Architecture, code quality, infra, system design |
+| [principal-engineer](assets/agents/principal-engineer.md) | **Tech lead & orchestrator** — architecture, code quality, infra, system design. Routes tasks to specialists. |
 | [security-engineer](assets/agents/security-engineer.md) | AppSec, IAM, OWASP, threat modeling, compliance |
 | [ux-engineer](assets/agents/ux-engineer.md) | Accessibility, performance, design systems, i18n |
 
