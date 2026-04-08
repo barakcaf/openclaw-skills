@@ -52,6 +52,8 @@ Scan for steering files:
 
 A rule lives in exactly one file — cross-reference, don't duplicate.
 
+**Import check:** If both CLAUDE.md and AGENTS.md exist, verify CLAUDE.md has `@AGENTS.md` import. Claude Code ignores AGENTS.md without it.
+
 ### Step 3: Audit
 
 For each recommendation in `references/recommendations.md`:
