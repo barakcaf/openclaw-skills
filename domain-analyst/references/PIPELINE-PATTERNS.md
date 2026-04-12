@@ -10,7 +10,7 @@ Best for: domains where signal comes from many scattered sources that need synth
 Step 0: Load Context (last 3 reports from S3)
 Step 1-N: Research Steps (domain-specific, each saves raw JSON checkpoint)
 Step N+1: Score & Filter (every result scored, decisions + reasoning saved)
-Step N+2: Synthesize & Draft (only included results, quality gate ≥7)
+Step N+2: Synthesize & Draft (only included results, dedup review, quality gate ≥7)
 ```
 
 **Characteristics:**
@@ -26,7 +26,7 @@ Step N+2: Synthesize & Draft (only included results, quality gate ≥7)
 3. Industry & open source
 4. Source discovery
 5. Score & filter
-6. Synthesize
+6. Synthesize (draft → dedup review → quality gate)
 
 ## Pattern B: Data-Driven Daily (Stock Analysis)
 
@@ -67,7 +67,8 @@ Regardless of pattern:
 4. **Scoring step is mandatory** — no black box between research and synthesis
 5. **Generation Stats in every report** (sources, timing, tokens, cost, model)
 6. **Continuity** — load last N reports, track narratives, don't repeat leads
-7. **Quality gate** — self-score, minimum threshold, regenerate if below
+7. **Dedup review** — mandatory pass between draft and quality gate. Each development gets ONE primary section; other sections reference with ≤1 sentence. Cross-section entity scan: anything in 3+ sections gets consolidated. Same point in different framing → keep stronger, kill the other.
+8. **Quality gate** — self-score, minimum threshold, regenerate if below
 
 ## S3 Structure
 

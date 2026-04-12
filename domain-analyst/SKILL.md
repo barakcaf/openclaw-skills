@@ -101,6 +101,12 @@ Design the report output format.
 - Any specific formatting rules? (no tables for Telegram, links required, etc.)
 
 **Always include:**
+- A **dedup review pass** between draft and quality gate:
+  - One home per story — each development gets ONE primary section; others reference in ≤1 sentence
+  - Cross-section entity scan — anything appearing in 3+ sections gets consolidated to the strongest section
+  - Bullet dedup — same point, different framing → keep the stronger, kill the other
+  - Lead signal rule — if a story is the lead, other sections add new angles only, no restatement
+  - If word count drops below minimum after dedup, expand remaining stories with deeper analysis — don't re-inflate with redundancy
 - A quality gate with minimum requirements and a scoring rubric (0-10)
 - A `📊 Generation Stats` section:
   - Sources consulted / cited / scored (included vs excluded)
