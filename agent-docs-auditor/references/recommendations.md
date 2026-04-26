@@ -78,3 +78,9 @@ Last researched: 2026-03-26
 - **MUST**: Every rule uses a severity level (**MUST** = hard blocker, **SHOULD** = strong default) and includes a ❌ pitfall example
 - Template: `- **MUST/SHOULD**: [one-line rule] — [why]` followed by `  - ❌ common pitfall`
 - ❌ Rules with no severity level and no concrete example of what to avoid
+
+### 14. Bridge AGENTS.md Into CLAUDE.md
+- **MUST**: If repo has both CLAUDE.md and AGENTS.md, add `@AGENTS.md` import to CLAUDE.md
+- Claude Code reads CLAUDE.md but ignores AGENTS.md — without the import, AGENTS.md content is invisible
+- The `@import` bridges them without duplicating content
+- ❌ Having an AGENTS.md with architecture/conventions that Claude Code never sees
