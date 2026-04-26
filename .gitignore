@@ -1,0 +1,7 @@
+# Build artifacts
+dist/
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*~
