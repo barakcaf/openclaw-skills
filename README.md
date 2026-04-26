@@ -39,17 +39,7 @@ Built for OpenClaw from scratch:
 
 | Skill | What it does |
 |-------|-------------|
-| `aws-agentcore` | Build and deploy agents with Amazon Bedrock AgentCore |
-| `aws-amplify` | Full-stack apps with AWS Amplify Gen 2 |
-| `aws-graviton-migration` | Analyze code compatibility with Graviton/Arm64 |
-| `aws-healthomics` | Genomics workflows in AWS HealthOmics |
-| `aws-infrastructure-as-code` | CDK + CloudFormation best practices |
-| `aws-mcp` | Multi-step AWS tasks using docs, APIs, and Agent SOPs |
-| `aws-observability` | CloudWatch Logs, Metrics, Alarms, Application Signals, CloudTrail |
-| `bedrock-pr-review` | AI-powered PR review via GitHub Actions + Bedrock Claude |
-| `cloud-architect` | AWS CDK in Python following Well-Architected framework |
-| `lambda-durable` | Resilient multi-step apps with Lambda durable functions |
-| `spark-troubleshooting-agent` | Troubleshoot Spark on EMR, Glue, and SageMaker |
+| `aws` | Router for all AWS tasks — dispatches to 33 sub-skills across architecture, deployment, serverless, databases, SageMaker, observability, Lambda, API Gateway, and more |
 
 ### Infrastructure & DevOps
 
@@ -86,8 +76,6 @@ Built for OpenClaw from scratch:
 | Skill | What it does |
 |-------|-------------|
 | `figma` | Connect Figma designs to code components |
-
-> **Note:** `cloudwatch-application-signals` is deprecated — use `aws-observability` instead.
 
 ---
 
