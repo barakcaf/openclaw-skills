@@ -27,6 +27,7 @@ Built for OpenClaw from scratch:
 |-------|-------------|
 | `agent-docs-auditor` | Audit and improve CLAUDE.md, AGENTS.md, and SKILL.md files |
 | `claude-agent-sdk` | Build AI agents with the Claude Agent SDK (Python & TypeScript) |
+| `claude-cert-prep` | Adaptive exam prep for Anthropic's Claude Certified Architect — Foundations (CCA-F) with baseline assessment + domain drills |
 | `cross-agent-test` | Zero-context cross-agent CLI testing via Claude Code |
 | `domain-analyst` | Design and scaffold recurring domain research reports with checkpointed pipelines, scoring transparency, and generation stats |
 | `engineering-team` | Scaffold a 3-agent team (principal, security, UX engineers) into any repo |
