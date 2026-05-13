@@ -34,6 +34,8 @@ Built for OpenClaw from scratch:
 | `feature-workflow` | End-to-end feature/bug workflow: design → branch → PR → merge |
 | `outline` | Interact with the Outline wiki API — create, search, manage docs |
 | `reposwarm` | Manage RepoSwarm investigations, workflows, and architecture analysis |
+| `state-of-genai` | Operate the weekly State of GenAI report — pipeline, sources, and drafter/auditor split for an "AI Economist" persona briefing |
+| `state-of-sdlc` | Operate the weekly State of AI in SDLC report — pipeline, sources, and drafter/auditor split for an "Engineering Operator" briefing |
 
 ### AWS & Cloud
 
